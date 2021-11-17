@@ -1,0 +1,15 @@
+-- 配置用户名和邮箱
+git config --global user.name "ran-xiao"
+git config --global user.email "120110880@qq.com"
+
+-- 托管
+git remote add origin git@github.com:ran-xiao/MyStudy.git
+-- 同步仓库内容
+git pull git@github.com:ran-xiao/MyStudy.git
+-- 本地上传仓库
+git add .
+-- 提交
+git commit -m "提交文件名"
+
+-- 推送
+ git push git@github.com:ran-xiao/MyStudy.git
