@@ -15,6 +15,20 @@ var d = null;
 var e = undefined;
 console.log(a, b, c, d, e);
 console.log(typeof a, typeof b, typeof c, typeof d, typeof e);
+// let 声明变量
+for(let i = 0;i< 2; i++){
+  console.log("---------------------------"+i);
+}
+console.log("----循环体外的let变量-----------"+i); //undefined  let只能作用在当前代码块中，类似于java中的private私有声明，且变量名不能重复声明
+for(var i1 = 0;i1< 2; i1++){
+  console.log("---------------------------"+i1);
+}
+console.log("------循环体外的var变量-------------------"+i1);
+
+const c1 = 1;
+//c1= 2; const表示不可改动类似java的final
+console.log("--------------------------------------"+c1);
+
 
 // for循环
 for (var i = 0; i < 10; i++) {
@@ -106,4 +120,4 @@ function f2(){
 
 var code = f2();
 console.log(code(2));
-// git 更改项目文件
+//
