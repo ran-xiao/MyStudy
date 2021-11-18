@@ -107,6 +107,3 @@ function f2(){
 var code = f2();
 console.log(code(2));
 // git 更改项目文件
-
-var rr = 100;
-console.log(rr);
