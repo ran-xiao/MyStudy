@@ -34,7 +34,7 @@ console.log("--------------------------------------"+c1);
 for (var i = 0; i < 10; i++) {
   console.log(i);
 }
-
+//------------------------------------------------------------------------------------------------
 console.log("==============================数组的四种定义==================================");// 数组的四种定义
 var arr = ["first","second","third"];
 console.log(arr);
@@ -48,7 +48,7 @@ console.log(crr);
 var drr = new Array("1","2","3");
 console.log(drr);
 console.log("==============================//数组的push()、pop()、splice()方法==================================");
-
+//------------------------------------------------------------------------------------------------
 crr.push("niubi");
 crr[1] = "zhongguo";
 console.log(crr);
@@ -58,8 +58,7 @@ drr.splice(0,1);
 console.log(drr);
 drr.splice(0,0,5,6,arr);
 console.log(drr);
-
-
+//------------------------------------------------------------------------------------------------
 console.log("==============================//函数创建以及作用域==================================");
 test();
 function test() {
@@ -86,6 +85,7 @@ function test1(){
 }
 
 test1(); //undefined
+//------------------------------------------------------------------------------------------------
 console.log("==============================//函数之参数==================================");
 function f1(a,b,c){
   console.log(arguments);
@@ -104,7 +104,7 @@ function fadd(){
 }
 var a = fadd(-1,-2,4);
 console.log("累加函数值:"+a);
-
+//------------------------------------------------------------------------------------------------
 console.log("==============================//函数之闭包==================================");
 /**
  * 1、在函数内还有一个函数
@@ -120,4 +120,76 @@ function f2(){
 
 var code = f2();
 console.log(code(2));
-//
+//------------------------------------------------------------------------------------------------
+console.log("==============================//题：计算0.2+0.3==================================");
+ var a = 0.1;
+ var b = 0.2;
+ console.log(a+b+"||"); //0.30000000000000004精度缺失
+//解决精度缺失，写一个函数来封装对小数进行化整处理
+function mathadd(a,b){
+
+   //获取参数中的最小值
+   var min = (a<b) ? a : b;
+  //转变为string类型
+  var a = a.toString();
+  var b = b.toString();
+
+  //获取2个数的最大公倍数
+  var beishu_num = 0;
+  if(a.indexOf(".") != -1){
+    var beishua = a.split(".")[1].length;
+    var num1 = a.replace(".","");//直接将小数点去掉来化整
+  }else{
+    beishua = 0;
+    num1 = a;
+  }
+  if(b.indexOf(".") != -1){
+    var beishub = b.split(".")[1].length;
+    var num2 = b.replace(".","");//直接将小数点去掉来化整
+  }else{
+    beishub = 0;
+    num2 =b;
+  }
+
+  if(beishua > beishub){
+    beishu_num = beishua - beishub;
+  }else if(beishua < beishub){
+    beishu_num = beishub - beishua;
+  }
+ 
+  if(a = min){
+    a = min;
+    for(var i = 0 ; i < beishu_num; i++){
+      num1 += "0";
+    }
+  }else{
+    for(var i = 0 ; i < beishu_num; i++){
+      num2 += "0";
+    }
+  }
+  //运算
+  // var result = a*beishu_value + b*beishu_value;1.001*1000也会精度缺失
+  //思路：不用乘法，改用replace替换小数点
+
+  var xiaoshuwei = beishua;
+  if(beishua > beishub){
+    xiaoshuwei = beishua;
+  }else if(beishua < beishub){
+    xiaoshuwei = beishub;
+  }
+
+  var beishu_value = 1;
+  for(var i = 0 ; i < xiaoshuwei; i++){
+    beishu_value *= 10;
+  }
+
+
+  var result = parseInt(num1) + parseInt(num2);
+  return result = result/beishu_value;
+
+
+}
+console.log(mathadd(0.1,0.2));
+//------------------------------------------------------------------------------------------------
+console.log("==============================//==================================");
+
