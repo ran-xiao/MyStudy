@@ -13,10 +13,111 @@
         alert("我是弹框"); //弹框
  
     </script>
+    <style>
+     .line{color: gold;font-size: 600;}
+    </style>
 </head>
  
 <body>
-   调试js begain.....
+  <a  id="01" title="超链接跳转" href="www.baidu.com">
+    百度
+  </a><br>
+  <table align="center" height = "200" width= '500' border="1">
+    <tr>
+      <td colspan = "2">1</td>
+      <!-- <td></td> -->
+      <td>2</td>
+      <!-- <td></td> -->
+    </tr>
+    <tr>
+      <td rowspan="2">3</td>
+      <td>4</td>
+      <td>5</td>
+      <!-- <td></td> -->
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>7</td>
+      <!-- <td></td> -->
+    </tr>
+  </table>
+  <table align="center" height = "100" width= '900' border="1">
+    <tr>
+      <td colspan="7">
+        <img src="image\dsds.jpg" height = "30" width= '30' alt="图片受损">
+      </td>
+    </tr>
+    <tr>
+      <td>赛事中心</td>
+      <td>赛事中心</td>
+      <td>赛事中心</td>
+      <td>赛事中心</td>
+      <td>赛事中心</td>
+      <td>赛事中心</td>
+      <td>赛事中心</td>
+    </tr>
+  </table>
+  <form method="get" action="login.php">
+  <table align="center" height = "100" width= '800' border="1">
+    <tr>
+      <td height = "30" width= '200'>请输入用户名：</td>
+      <td><input aria-label="text" type="text" name="username"></td>
+    </tr>
+    <tr>
+      <td height = "30" width= '200'>请输入密码：</td>
+      <td><input aria-label="password" type="password" name="password"></td>
+    </tr>
+    <tr>
+      <td height = "30" width= '200'>请输入个人介绍：</td>
+      <td><textarea aria-label="textarea" name="description" rows="10" cols="80"></textarea></td>
+    </tr>
+    <tr>
+      <td height = "30" width= '200'>请选择您的爱好：</td>
+      <td><input  aria-label="checkbox" type="checkbox" name="fish" value="fishing">钓鱼</label>
+        <label><input type="checkbox" name="LOL" value="lol">LOL</label>
+        <label><input type="checkbox" name="wangzhe" value="wangzhe">王者荣耀</label>
+      </td>
+    </tr>
+    <tr>
+      <td height = "30" width= '200'>请选择您的性别：</td>
+      <td><label><input type="radio" name="sex" value="1">男</label>
+        <label><input type="radio" name="sex" value="0">女</label></td>
+    </tr>
+    <tr>
+      <td height = "30" width= '200'>请选择收获地址</td>
+      <td>
+        <select aria-label="select" name="province">      
+          <option>----------请选择省份----------</option>
+          <option value="江苏省">江苏省</option>
+        </select>
+        <select aria-label="city" name="city">      
+          <option>----------请选择城市----------</option>
+          <option value="常州市">常州市</option>
+        </select>
+        <select aria-label="area" name="area">      
+          <option>----------请选择省份----------</option>
+          <option value="新北区">新北区</option>
+        </select>
+        <br><br>
+        请输入详细地址:
+        <br><br>
+        <textarea aria-label="address" name="address" rows="10" cols="80"></textarea>
+      </td>
+    </tr>
+    <tr align="right">
+      <td height = "30" width= '200' colspan="2">
+        <input type="submit" value="登录">
+      </td>
+    </tr>
+  </table>     
+</form>
+<div style="color: rgb(141, 135, 222);font-weight: 600;text-align: center;">CSS
+  <h1>静夜思</h1>
+  <p class="line">床前明月光</p>
+  <p class="line">疑是地上霜</p>
+  <p class="line">举头望明月</p>
+  <p class="line">低头思故乡</p>
+</div>
 </body>
  
 </html>
